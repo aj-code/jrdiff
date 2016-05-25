@@ -1,0 +1,6 @@
+{
+  "name": "jrdiff",
+  "tagline": "A non-compatible implementation of rdiff in java.",
+  "body": "jrdiff\r\n=======\r\n\r\nA non-compatible implementation of rdiff in Java.\r\n\r\nThis allows you to generate a signature of a file. Then once that file changes you can generate a delta file using the old signature. This delta can then be used to patch an old copy of the file to bring it up to date with the new file. This type of scheme is used under the hood by rsync and can be good for a few things like creating a backup system, efficiently syncing changes between servers, etc.\r\n\r\n### Requirements ###\r\nThere are no external dependencies outside of a JVM. jrdiff should run anywhere Java 5+ runs: Windows, mac, linux, probably even Android. Only linux and Windows have been tested.\r\n\r\n### Usage ###\r\nGrab the jrdiff.jar file from the [repo](https://github.com/aj-code/jrdiff/), then:\r\n```\r\njava -jar jrdiff.jar signature <basis file> <signature output file>\r\njava -jar jrdiff.jar delta <signature file> <new file> <delta output file>\r\njava -jar jrdiff.jar patch <basis file> <delta file> <new output file>\r\n```",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}

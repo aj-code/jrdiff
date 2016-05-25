@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>jrdiff by aj-code</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>jrdiff</h1>
+        <p>A non-compatible implementation of rdiff in java.</p>
+
+        <p class="view"><a href="https://github.com/aj-code/jrdiff">View the Project on GitHub <small>aj-code/jrdiff</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/aj-code/jrdiff/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/aj-code/jrdiff/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/aj-code/jrdiff">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="jrdiff" class="anchor" href="#jrdiff" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>jrdiff</h1>
+
+<p>A non-compatible implementation of rdiff in Java.</p>
+
+<p>This allows you to generate a signature of a file. Then once that file changes you can generate a delta file using the old signature. This delta can then be used to patch an old copy of the file to bring it up to date with the new file. This type of scheme is used under the hood by rsync and can be good for a few things like creating a backup system, efficiently syncing changes between servers, etc.</p>
+
+<h3>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h3>
+
+<p>There are no external dependencies outside of a JVM. jrdiff should run anywhere Java 5+ runs: Windows, mac, linux, probably even Android. Only linux and Windows have been tested.</p>
+
+<h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h3>
+
+<p>Grab the jrdiff.jar file from the <a href="https://github.com/aj-code/jrdiff/">repo</a>, then:</p>
+
+<pre><code>java -jar jrdiff.jar signature &lt;basis file&gt; &lt;signature output file&gt;
+java -jar jrdiff.jar delta &lt;signature file&gt; &lt;new file&gt; &lt;delta output file&gt;
+java -jar jrdiff.jar patch &lt;basis file&gt; &lt;delta file&gt; &lt;new output file&gt;
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/aj-code">aj-code</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
